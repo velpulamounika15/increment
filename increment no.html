@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://media.istockphoto.com/id/1412237261/photo/travel-by-train.jpg?s=612x612&w=0&k=20&c=OT0B4d03iHN7P4AJFI3ZjiZBu9yJOx_Jxsk21nZ7I-I=");
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            background-position: center;
+           
+        }
+        .nimbers{
+            position: absolute;
+            top:35%;
+            left: 10%;
+            right: 10%;
+            text-align: center; 
+
+        }
+        
+        #increment-btn{
+            padding: 7px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        #decrement-btn{
+            padding: 7px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        h1{
+            font-size: 30px;
+            color: black;
+            font-weight: 600;
+            
+        }
+        h2{
+            font-size: 40px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="nimbers">
+        <h1>People Entered</h1>
+        <h2 id="count-el">0</h2>
+        <button  id="increment-btn" onclick="increment()">INCREMENT</button>
+
+        <button id="decrement-btn" onclick="decrement()">DECREMENT</button>
+    </section>
+
+
+    <script>
+        countEL=document.getElementById("count-el")
+        console.log(countEL);
+        let count=0;
+
+        function increment(){
+            count=count+1
+            countEL.innerText=count
+        }
+
+    
+
+        function decrement(){
+           if(count>0){
+            count--;
+           }
+           countEL.innerText=count;
+        }
+
+
+    
+    </script>
+</body>
+</html>
